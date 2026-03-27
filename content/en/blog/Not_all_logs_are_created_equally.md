@@ -40,7 +40,7 @@ A common example of a log that is enabled but not sufficient is audit logs. Some
 }
 ```
 
-### In plain English 
+#### In plain English 
 > On March 15th, 2025, at 9:04 am UTC, jsmith logged in successfully.
 
 The log above might look useful, and many organizations enable audit logs for compliance. Still, for an enterprise application with thousands of users, the usefulness of audit logs to a security team is very limited. The reason is that audit logs lack the context that makes them actionable, and generate too much noise to be useful. For example, knowing that the user logged in at 9:04 am UTC  provides very little context to the detection engineer. It does not tell them whether this is an unusual sign-in, which device the user logged on to, or what the user did after logging in. Without this context, an audit log like this cannot distinguish between a legitimate user and a malicious user. 
@@ -80,7 +80,7 @@ As a result, noisy audit logs hinder performance and unnecessarily increase the 
 }
 ```
 
-### What this log says in plain English
+#### What this log says in plain English
 
 > On March 15th, 2024, at 9:04 am UTC, the HR Portal recorded a login from jsmith. This user initiated a login request using Chrome browser version 122.0. The application confirmed the password was correct, sent an MFA notification through Okta, and recorded that jsmith approved it. The application assigned a session ID to track all of jsmith's activity for the duration of their visit, and logged that the request came from IP address 192.168.1.105 on the corporate network. It shows that this application was running version 4.2.1.
 
