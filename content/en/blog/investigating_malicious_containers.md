@@ -114,7 +114,7 @@ find / -name "malicious_node_modules_like_AsyncAPI" -type d 2>/dev/null
 
 ## Conclusion
 
-Supply chain attacks like Shai-Hulud demonstrate the importance of having proper incident response procedures for containerized environments. By following this methodology, security teams can effectively triage suspicious containers.
+Supply chain attacks like Shai-Hulud are tricky to contain, and many companies do not have adequate visibility to containers. I hope this guide serves as a starting point, if there is ever a need to investigate potentially compromised containers.
 
 Resources 
 - https://www.trendmicro.com/en_us/research/25/k/shai-hulud-2-0-targets-cloud-and-developer-systems.html
