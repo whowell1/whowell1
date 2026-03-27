@@ -117,7 +117,8 @@ The security team's ability to detect breaches, respond quickly, and protect the
 
 References 
 
-- 
+- https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes
+- https://www.securitymetrics.com/blog/importance-log-management 
 
 {{< css.inline >}}
 
