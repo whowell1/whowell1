@@ -7,7 +7,7 @@ tags: ["SIEM, Detection Engineering"]
 thumbnail: https://www.reuters.com/resizer/v2/G5DHSBOQGZJSZDTJY2CMBIAF4M.jpg?auth=4ace48a213aca06318b8c19f0768bba32896f8876d6270927b6ada07bf6a8a6e&width=1080&quality=80
 ---
 
-To have a well-oiled incident response team, it is crucial to have strong detection rules. Although security teams know what good detection rules look like, many other teams that help provide logging to enable detection do not know which information is useful to an incident response team or a detection team. This gap of what is useful and what is not can cause friction between the cyber teams (incident response and detection) and the teams that help them. This blog post helps bridge this gap. 
+To have a well-oiled incident response team, it is crucial to have strong detection rules. Although security teams know what good detection rules look like, many other teams that help provide logging to enable detection do not know which information is useful to an incident response team or a detection team. This gap of what is useful and what is not can cause friction between the cyber teams (incident response and detection) and the teams that help them. This blog post is an attempt to help bridge this gap. 
 
 ---
 
@@ -45,8 +45,7 @@ A common example of a log that is enabled but not sufficient is audit logs. Some
 
 The log above might look useful, and many organizations enable audit logs for compliance. Still, for an enterprise application with thousands of users, the usefulness of audit logs to a security team is very limited. The reason is that audit logs lack the context that makes them actionable, and generate too much noise to be useful. For example, knowing that the user logged in at 9:04 am UTC  provides very little context to the detection engineer. It does not tell them whether this is an unusual sign-in, which device the user logged on to, or what the user did after logging in. Without this context, an audit log like this cannot distinguish between a legitimate user and a malicious user. 
 
-In addition, the sample audit logs not only provide little value, but they also create noise by generating an entry every time a user signs in.
-As a result, noisy audit logs hinder performance and unnecessarily increase the budget. In most SIEMs (Security Information and Event Management Systems), logs are stored in a centralized location, so the more data it ingests, the more it will cost and the slower the platform becomes. Noisy audit logs burn the budget for nonessential logs, preventing the ingestion of more useful logs that could improve detection. 
+In addition, the sample audit logs not only provide little value, but they also create noise by generating an entry every time a user signs in. As a result, noisy audit logs hinder performance and unnecessarily increase the budget. In most SIEMs (Security Information and Event Management Systems), logs are stored in a centralized location, so the more data it ingests, the more it will cost and the slower the platform becomes. Noisy audit logs burn the budget for nonessential logs, preventing the ingestion of more useful logs that could improve detection. 
 
 #### Example of a Useful Log
 
@@ -110,11 +109,15 @@ For every team responsible for an application that feeds into a security pipelin
 
 > *Is what we are logging actually useful? Does it give the security team enough context to do their job?*
 
-This distinction is very important. Noisy, shallow logs do not just fail to help; they actively get in the way. They consume budget, slow down platforms, and bury the signals that actually matter. For a small security team already stretched thin, a flood of low-context logs without any actionable items is barely helpful than no logging at all.
+This distinction is very important. Noisy, shallow logs do not just fail to help; they actively get in the way.  consume budget, slow down platforms, and bury the signals that actually matter. For many small security teams that are already stretched thin, a flood of low-context logs without any actionable items is barely helpful than no logging at all.
 
 The security team's ability to detect breaches, respond quickly, and protect the organization often traces back to a decision made long before any incident. 
 
 **So please, log with intention.**
+
+References 
+
+- 
 
 {{< css.inline >}}
 
