@@ -90,7 +90,7 @@ To further illustrate why this matters, consider a scenario where the same usern
 
 ---
 
-## How Context-rich Logs Lad to Better Detection Engineering and an Efficient SOC 
+## How Context-rich Logs Lad to Better Detection Engineering and an Better Security Program
 
 A context-rich log is the foundation of a good detection rule, and a good detection rule is the foundation of an efficient SOC. The relationship among the three is similar to that among fresh ingredients, a recipe, and a chef. No matter how talented the chef or how well-written the recipe, the quality of the meal is ultimately decided before anyone sets foot in the kitchen.
 
