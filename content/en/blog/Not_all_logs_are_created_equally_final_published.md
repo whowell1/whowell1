@@ -21,12 +21,14 @@ The logging team is not a team directly within a cybersecurity organization, but
 
 A common example of a log that is enabled but not sufficient is audit logs. Some modern SAAS applications provide audit logging for free. An audit log records system activity, typically including who logged in, the timestamp, and the outcome. The example below shows an audit log:
 
+```json
 {
- "timestamp": "2025-03-15T09:04:32.441Z",
- "event_type": "user_login",
- "username": "jsmith",
- "outcome": "success"
+  "timestamp": "2025-03-15T09:04:32.441Z",
+  "event_type": "user_login",
+  "username": "jsmith",
+  "outcome": "success"
 }
+```
 
 #### In plain English 
 
@@ -39,6 +41,7 @@ As a result, noisy audit logs hinder performance and unnecessarily increase the 
 
 #### Example of a Useful Log
 
+```json
 {
   "timestamp": "2025-03-15T09:04:32.441Z",
   "application": {
@@ -66,6 +69,7 @@ As a result, noisy audit logs hinder performance and unnecessarily increase the 
     "session_id": "a3f92b1c-4d78-11ee-be56-0242ac120002"
   }
 }
+```
 
 ### What this log says in plain English
 
