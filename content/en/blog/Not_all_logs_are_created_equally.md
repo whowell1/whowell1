@@ -2,7 +2,7 @@
 author: "Wren Howell"
 title: "Not all Logs are Created Equally"
 date: 2026-03-12
-description: "Understanding Content Rich Logs can Help Security Teams"
+description: "Understanding How Content Rich Logs Can Help Security Teams"
 tags: ["SIEM, Detection Engineering"]
 thumbnail: https://www.reuters.com/resizer/v2/G5DHSBOQGZJSZDTJY2CMBIAF4M.jpg?auth=4ace48a213aca06318b8c19f0768bba32896f8876d6270927b6ada07bf6a8a6e&width=1080&quality=80
 ---
