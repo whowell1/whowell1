@@ -77,7 +77,7 @@ As a result, noisy audit logs hinder performance and unnecessarily increase the 
 
 ### What this log says in plain English
 
-On March 15th, 2024, at 9:04 am UTC, the HR Portal recorded a login from jsmith. This user initiated a login request using Chrome browser version 122.0. The application confirmed the password was correct, sent an MFA notification through Okta, and recorded that jsmith approved it. The application assigned a session ID to track all of jsmith's activity for the duration of their visit, and logged that the request came from IP address 192.168.1.105 on the corporate network. The application also recorded that this was version 4.2.1 running in the production environment.
+> On March 15th, 2024, at 9:04 am UTC, the HR Portal recorded a login from jsmith. This user initiated a login request using Chrome browser version 122.0. The application confirmed the password was correct, sent an MFA notification through Okta, and recorded that jsmith approved it. The application assigned a session ID to track all of jsmith's activity for the duration of their visit, and logged that the request came from IP address 192.168.1.105 on the corporate network. It shows that this application was running version 4.2.1.
 
 Several characteristics make this a useful log. It answers the core questions: who took an action, what they did, where the request came from, and how they authenticated. Each field is distinct enough to serve as a baseline for normal behavior. In addition, each field is unique enough to build rules that can help distinguish a legitimate user from a potentially malicious one.
 
