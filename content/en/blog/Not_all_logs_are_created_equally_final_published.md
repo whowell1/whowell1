@@ -4,7 +4,7 @@ title: "Not all Logs are Created Equally"
 date: 2025-03-12
 description: "Understanding Content Rich Logs can Help Security Teams"
 tags: ["SIEM, Detection Engineering"]
-thumbnail: https://specialpipingmaterials.com/wp-content/uploads/2020/05/Copy-of-Copy-of-Untitled-14.png
+thumbnail: https://unsplash.com/photos/gray-pipe-on-green-grass-X-NAMq6uP3Q
 ---
 
 To have a well-oiled incident response team, it is crucial to have strong detection rules. Although security teams know what good detection rules look like, many other teams that help provide logging to enable detection do not know which information is useful to an incident response team or a detection team. This gap of what is useful and what is not can cause friction between the cyber teams (incident response and detection) and the teams that help them. This blog post helps bridge this gap. 
