@@ -34,9 +34,9 @@ A common example of a log that is enabled but not sufficient is audit logs. Some
 }
 ```
 
-#### In plain English 
+## In plain English 
 
-On March 15th, 2025, at 9:04 am UTC, jsmith logged in successfully.
+> On March 15th, 2025, at 9:04 am UTC, jsmith logged in successfully.
 
 The log above might look useful, and many organizations enable audit logs for compliance. Still, for an enterprise application with thousands of users, the usefulness of audit logs to a security team is very limited. The reason is that audit logs lack the context that makes them actionable, and generate too much noise to be useful. For example, knowing that the user logged in at 9:04 am UTC  provides very little context to the detection engineer. It does not tell them whether this is an unusual sign-in, which device the user logged on to, or what the user did after logging in. Without this context, an audit log like this cannot distinguish between a legitimate user and a malicious user. 
 
@@ -109,7 +109,7 @@ This distinction is very important. Noisy, shallow logs do not just fail to help
 
 The security team's ability to detect breaches, respond quickly, and protect the organization often traces back to a decision made long before any incident. 
 
-**So please — log with intention.**
+**So please,  log with intention.**
 
 {{< css.inline >}}
 
