@@ -1,7 +1,7 @@
 ---
 author: "Wren Howell"
 title: "Not all Logs are Created Equally"
-date: 2025-03-12
+date: 2026-03-12
 description: "Understanding Content Rich Logs can Help Security Teams"
 tags: ["SIEM, Detection Engineering"]
 thumbnail: https://unsplash.com/photos/gray-pipe-on-green-grass-X-NAMq6uP3Q
@@ -94,8 +94,6 @@ For every team responsible for an application that feeds into a security pipelin
 This distinction is very important. Noisy, shallow logs do not just fail to help; they actively get in the way. They consume budget, slow down platforms, and bury the signals that actually matter. For a small security team already stretched thin, a flood of low-context logs without any actionable items is barely helpful than no logging at all.
 
 The security team's ability to detect breaches, respond quickly, and protect the organization often traces back to a decision made long before any incident. So please log with intention.
-
-
 
 {{< css.inline >}}
 
