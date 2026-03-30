@@ -1,6 +1,6 @@
 ---
 author: "Wren Howell"
-title: "Not all Logs are Created Equally"
+title: "Not all Logs are Created Equal"
 date: 2026-03-12
 description: "Understanding How Content Rich Logs Can Help Security Teams"
 tags: ["SIEM, Detection Engineering"]
@@ -45,7 +45,7 @@ A common example of a log that is enabled but not sufficient is audit logs. Some
 
 The log above might look useful, and many organizations enable audit logs for compliance. Still, for an enterprise application with thousands of users, the usefulness of audit logs to a security team is very limited. The reason is that audit logs lack the context that makes them actionable, and generate too much noise to be useful. For example, knowing that the user logged in at 9:04 am UTC  provides very little context to the detection engineer. It does not tell them whether this is an unusual sign-in, which device the user logged on to, or what the user did after logging in. Without this context, an audit log like this cannot distinguish between a legitimate user and a malicious user. 
 
-In addition, the sample audit logs not only provide little value, but they also create noise by generating an entry every time a user signs in. As a result, noisy audit logs hinder performance and unnecessarily increase the budget. In most SIEMs (Security Information and Event Management Systems), logs are stored in a centralized location, so the more data it ingests, the more it will cost and the slower the platform becomes. Noisy audit logs burn the budget for nonessential logs, preventing the ingestion of more useful logs that could improve detection. 
+In addition, audit logs not only provide little value, but they also create noise by generating an entry every time a user signs in. As a result, noisy audit logs hinder performance and unnecessarily increase the budget. In most SIEMs (Security Information and Event Management Systems), logs are stored in a centralized location, so the more data it ingests, the more it will cost and the slower the platform becomes. Noisy audit logs burn the budget for nonessential logs, preventing the ingestion of more useful logs that could improve detection. 
 
 #### Example of a Useful Log
 
