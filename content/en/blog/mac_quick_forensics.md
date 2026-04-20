@@ -120,3 +120,4 @@ References
 - https://github.com/nlscott/macOS-Security
 - https://oliviagallucci.com/blog/
 - https://www.loobins.io
+- https://docs.google.com/spreadsheets/d/1X2Hu0NE2ptdRj023OVWIGp5dqZOw-CfxHLOW_GNGpX8/edit?gid=1317205466#gid=1317205466
