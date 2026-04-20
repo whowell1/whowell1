@@ -59,7 +59,7 @@ Since macOS Catalina (2019), Zsh has been the default shell. Shell history files
 /Users/usersname/.zsh_history
 ```
 
-*** What to look for ***
+**What to look for**
 
 - Unusual curl or wget commands
 - Installation of unfamiliar programs
