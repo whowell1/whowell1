@@ -9,19 +9,15 @@ thumbnail: https://images.hindustantimes.com/tech/img/2024/11/18/1600x900/michai
 
 Recently, I had to write a playbook for Macs from a incident response perspective. Even though I had experience investigating Macs before, because I did not do it in such a long time, I struggled through the investigation more than I would have. So I decided to make a guide that will be helpful for me in the future.  This will expand on the previous blog post about Mac persistence mechanisms and provide additional forensic artifacts that a investigator could look at that could be of value. This blog will also link some amazing blog posts by some amazing Mac researchers.
 
-### Looking at Launch Agents and Launch Daemons
+## Launch Agents and Launch Daemons
 
-**Description**
-
-LaunchAgents and LaunchDaemons are the standard macOS mechanisms for starting programs automatically at user login or system boot. 
-
-**Forensic significance**
-
-Launch Agents and Launch Daemons are by far the most common place for persistence. Some important plist properties to look at are:
+LaunchAgents and LaunchDaemons are the standard macOS mechanisms for starting programs automatically at user login or system boot. These are by far the most common place for persistence. Some important plist properties to look at are:
 
 - RunAtLoad property is true: indicates execution at load time and a sign of persistence 
 - StartInterval or StartCalendarInterval:  define scheduled execution
 - KeepAlive: also an indication of persistence
+
+## Location 
 
 ```
 users.homedir/Library/LaunchAgents/
@@ -29,59 +25,53 @@ users.homedir/Library/LaunchAgents/
 /System/Library/LaunchDaemons 
 ```
 
-**Useful command**
+**Potentially Useful Commands**
+
+To render the plist in a readable format run
+
 ```bash
 plutil -p <file.plist>
 ```
-Renders the plist in a readable format so you can quickly see what binary or script it is pointing to.
 
-**If malicious LaunchAgent/LaunchDaemon is found**
+If malicious LaunchAgent/LaunchDaemon is found. Run the command below to stop the plist and deregister it
 
 ```bash
 launchctl unload /path/to/suspicious.plist
 ```
 
-This will stop the running process and deregisters it. Remove the malicious plist. 
+Then run the next command to remove the plist. 
 
-> **Tip:** Additional persistence mechanisms are documented at [loobins.io](https://www.loobins.io).
+```bash
+rm /path/to/suspicious.plist
+```
 
+> **Tip:** Additional living off the orchard mechanisms are documented at [loobins.io](https://www.loobins.io).
 
----
+--- 
 
-### Looking at shell commands and execution history like zshell
+## Shell History
 
-**Description**
+Since macOS Catalina (2019), Zsh has been the default shell. Shell history files records commands entered by the user and can provide direct evidence of what was executed on the system.
 
-Shell history record commands entered by the system. Since 2019, zshell has been the default shell for macOS. 
-
-**Forensic significance**
-
-Looking at shells can provide evidence to see what was run on the system.  
-
-
-**Location for zshell**
+## Location
 
 ```
 /Users/usersname/.zsh_history
 ```
 
-**What to look for**
+## What to look for
 
-Look for strange curl commands, attempts of installation of unfamiliar programs, unusual scripts running. 
+- Unusual curl or wget commands
+- Installation of unfamiliar programs
+- Obfuscated or encoded scripts being executed
 
----
+--- 
 
-### Looking at Browser History 
+## Browser History 
 
-**Description**
+Browser history shows the sites the user navigated to. It is one of the quickest ways to establish root cause of an infection. 
 
-Browser history shows the where the sites that the user navigated to. 
-
-**Forensic significance**
-
- Looking at browser history is one of the quickest ways to find root cause of infection. It can help determine root cause like whether the user clicked on a phishing link, or went to a suspicious site that led to the initial infection. Different browser have their browser history artifact in varying locations. Common browser and their locations are listed below.
-
-**Locations by browser**
+Locations by browser
 
 | Browser | Path |
 |---------|------|
@@ -89,46 +79,33 @@ Browser history shows the where the sites that the user navigated to.
 | Chrome | `~/Library/Application Support/Google/Chrome/History` |
 | Firefox | `/Library/Application Support/Firefox/Profiles/*/` |
 
----
+--- 
 
-### Looking at User Downloads 
+## User Downloads 
 
-**Description**
+The Downloads folder contains files retrieved from the internet and is a quick place to look for potentially malicious artifacts.
 
-User downloads shows files that a user downloads from the Internet. 
-
-**Forensic significance**
-
-Looking at downloads, is also a quick way to find potential malicious artifacts. 
-
-**Locations**
+## Location
 
 ```
 /Users/usersname/Downloads
 ```
 
-**Useful command**
+**Potentially Useful Command**
 
 ```bash
 xattr -l <file>
 ```
 Lists all extended attributes on a file, including the quarantine URL showing where the download originated.
 
----
+--- 
 
-### Looking at Unified Audit Logs
+## Unified Audit Logs
 
-**Description**
-
-Unified logging is a centralized logging system for macOS. The system collects logs from the kernel, OS processes, and third-party apps into a single binary store. Entries are stored in .tracev3 files and best viewed through the terminal.
+Unified logging is a centralized logging system for macOS. The system collects logs from the kernel, OS processes, and third-party apps into a single binary store. Entries are stored in .tracev3 files and best viewed through the terminal or Console.app. It shows things like process execution, network activity, and much more. It is a very verbose log source that can be vital in forensic investigations. 
 
 
-**Forensic significance**
-
-It shows things like process execution, network activity, and much more. It is a very verbose log source that can be vital in forensic investigations. 
-
-
-**Locations**
+## Locations
 
 ```
 /var/db/diagnostics/
@@ -143,21 +120,3 @@ References
 - https://github.com/nlscott/macOS-Security
 - https://oliviagallucci.com/blog/
 - https://www.loobins.io
-
-
-
-
-<style>
-.emojify {
-	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-	font-size: 2rem;
-	vertical-align: middle;
-}
-@media screen and (max-width:650px) {
-  .nowrap {
-    display: block;
-    margin: 25px 0;
-  }
-}
-</style>
-
