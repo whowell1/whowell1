@@ -1,6 +1,6 @@
 ---
 author: "Wren Howell"
-title: "Mac Quick Forensics"
+title: "Looking at More Mac Forensic Artifacts"
 date: 2026-04-19
 description: "Exploring Mac Artifacts"
 tags: ["More Mac Artifacts"]
@@ -17,7 +17,7 @@ LaunchAgents and LaunchDaemons are the standard macOS mechanisms for starting pr
 - StartInterval or StartCalendarInterval:  define scheduled execution
 - KeepAlive: also an indication of persistence
 
-## Location 
+### Location of Launch Agent and Launch Daemons
 
 ```
 users.homedir/Library/LaunchAgents/
@@ -53,13 +53,13 @@ rm /path/to/suspicious.plist
 
 Since macOS Catalina (2019), Zsh has been the default shell. Shell history files records commands entered by the user and can provide direct evidence of what was executed on the system.
 
-## Location
+### Location of zsh 
 
 ```
 /Users/usersname/.zsh_history
 ```
 
-## What to look for
+*** What to look for ***
 
 - Unusual curl or wget commands
 - Installation of unfamiliar programs
@@ -85,7 +85,7 @@ Locations by browser
 
 The Downloads folder contains files retrieved from the internet and is a quick place to look for potentially malicious artifacts.
 
-## Location
+### Location
 
 ```
 /Users/usersname/Downloads
@@ -105,7 +105,7 @@ Lists all extended attributes on a file, including the quarantine URL showing wh
 Unified logging is a centralized logging system for macOS. The system collects logs from the kernel, OS processes, and third-party apps into a single binary store. Entries are stored in .tracev3 files and best viewed through the terminal or Console.app. It shows things like process execution, network activity, and much more. It is a very verbose log source that can be vital in forensic investigations. 
 
 
-## Locations
+### Location of Unified Audit Logs
 
 ```
 /var/db/diagnostics/
