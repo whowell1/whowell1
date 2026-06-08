@@ -147,9 +147,6 @@ References
 - LLM Benchmarking (https://blog-datalab.com/making-sense-of-ai-benchmarks/)
 
 
-
-{{< css.inline >}}
-
 <style>
 .emojify {
 	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
