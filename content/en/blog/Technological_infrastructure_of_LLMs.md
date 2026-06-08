@@ -17,12 +17,12 @@ The initial idea for this blog post came from Luke Kanies, who wrote about how A
 Understanding the Technical Infrastructure
 
 
-Understanding the Technical Jargon
+## Understanding the Technical Jargon
 
-One of the very first things I noticed when engaging with others about the impact of AI on society was that they did not have a good grasp of the different job descriptions and the technical concepts I take for granted in the tech field.
+One of the very first things I noticed when engaging with others about the impact of AI on society was that they did not have a good grasp of the different job descriptions and the technical concepts I take for granted working in this industry.
 
 
-Software Developers
+#### Software Developers
 
 Software developers write the code that powers the applications people use today. Building software is like building a facility for a family that is always growing. As requirements change, the facility will need to be updated to accommodate the growing number of people. Sometimes the facility needs small additions; sometimes, it needs major architectural changes while still keeping the various parts of the house intact. Just as this builder does, software developers navigate changes in business, technology, and customer needs while ensuring the product is working and secure. Just as a builder needs to work with people with diverse skill sets (plumbers, electricians, carpenters, roofers, etc.) to help build a facility, software developers have diverse skill sets and work with various teams to build software. Some of these skills and specialties in software engineering are listed below.
 
@@ -34,7 +34,7 @@ Software developers write the code that powers the applications people use today
 - Dev-ops Developer: builds pipelines and helps ship code from the laptop to production.
 
 
-Information Technology (IT) Security/Security practitioners
+#### Information Technology (IT) Security/Security Practitioners
 
 IT security professionals protect systems, networks, and data from unauthorized access, damage, or attack. Even though software developers can be IT security professionals, and IT security professionals can be software developers, for most organizations, having the same team perform both tasks is too much to ask. For example, an organization that manages critical IT infrastructure, such as banking or power grids, requires many IT security professionals to monitor, update, and surveil nation-states that can have significant impacts on people. Some of these IT security skills and specialties are listed below in a simplified  way.
 
@@ -43,25 +43,24 @@ IT security professionals protect systems, networks, and data from unauthorized 
 - Detection Team: Monitor networks and systems for suspicious activity, building and tuning alerts to catch threats early.
 - GRC Team: Ensure the organization adheres to security laws, regulations, and internal policies, manages risk, and maintains compliance documentation.
 
-Artificial Intelligence (AI)
+#### Artificial Intelligence (AI)
 
 AI is a broad term that encompasses fields of computer and data science focused on building machines with human-like intelligence to perform tasks such as learning, reasoning, problem-solving, perception, and language understanding (https://www.mtu.edu/computing/ai/). AI as a domain has been around since the 1950s.  AI is used in commercial software for tasks such as recommendation engines and phishing email detection. What introduced AI into the cultural zeitgeist was the release of ChatGPT, a conversational chatbot built on a large language model (LLM).
 
-Large Language Model (LLM)
+#### Large Language Model (LLM)
 
 Dr. Timnit Gebru, an AI researcher, describes language models as "systems trained on string prediction tasks, predicting the likelihood of a token (character, word, or string) given either its preceding context or (in bidirectional and masked LMs) its surrounding context" (https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf).
 
 
-Artificial General Intelligence (AGI)
-
+#### Artificial General Intelligence (AGI)
 
 AGI is a type of artificial intelligence that matches or surpasses human capabilities across virtually all cognitive tasks (https://www.ibm.com/think/topics/artificial-general-intelligence).
 
 
-These definitions are important because the tech industry often uses the terms AGI, LLM, and AI interchangeably, which can confuse the general public. The definition of AGI has not changed from a scientific perspective. However, despite clear definitions set by experts, tech CEOs and tech companies obscure and redefine these terms to suit their needs. The quotes by Sam Alman in 2025, 'AI systems can rival a legitimate PhD-level expert in any field,' and Dario Amadi's 2026 remark, 'I do not know if AI models are conscious,' are obvious examples of highly public figures conflating terms and confusing the public.
+These definitions are important because the tech industry often uses the terms AGI, LLM, and AI interchangeably, which can confuse the general public. The definition of AGI does not have scientific consensus because intelligence is hard to measure. This resulted in tech CEOs and tech companies to obscure and redefine these terms to suit their needs. The quotes by Sam Alman in 2025, 'AI systems can rival a legitimate PhD-level expert in any field,' and Dario Amadi's 2026 remark, 'I do not know if AI models are conscious,' are obvious examples of highly public figures conflating terms and confusing the public.
 
 
-Explaining the Technical Tidbits of LLMs (Training, Benchmarking, RAG, and Inference)
+### Explaining the Technical Tidbits of LLMs (Training, Benchmarking, RAG, and Inference)
 
 
 Stage 1: Pre-training
@@ -98,7 +97,7 @@ Inference
 Inference is when an LLM produces predictions or conclusions, or, put more simply, the results of its output. When a user puts a prompt into a frontier model (OpenAI, ClaudeCode, xAI), the prompt is split into tokens and converted to numbers for matrix multiplication. This step, called prefill, is performed in parallel, enabling all input tokens to be processed simultaneously. "The decode step is where the model produces its output. It is an iterative process where the model generates one token at a time, with each new token being predicted based on the probability of all the tokens that came before it, until the full response is complete.
 
 
-Technical Limitations of LLM's
+### Technical Limitations of LLM's
 
 
 Benchmark Limitations
@@ -174,10 +173,10 @@ The last part of the CIA triad, availability, is a risk as well. LLMs have a lim
 The Use of LLMs in Security
 
 
-What I personally use LLMs for is very limited tasks like coming up with Kusto Query Language/Kibana Query Language (KQL) to help me write queries, rewrite regex filters, help rewrite emails, reformat things, rewrite some Dockerfiles, resolve syntax errors in my code, get started on reverse engineering basic obfuscation along with CyberChef, and aid in research and pulling data sources together. In addition, I spend part of my day experimenting with ways to bypass the guardrails built into these systems. For more complex tasks, LLMs' usefulness is limited, so I avoid them unless I can break them down into smaller tasks.  
+What I personally use LLMs for is very limited tasks like coming up with Kusto Query Language/Kibana Query Language (KQL) to help me write queries, rewrite regex filters, help rewrite emails, reformat things, rewrite some Dockerfiles, resolve syntax errors in my code, get started on reverse engineering basic obfuscation along with CyberChef, and aid in research and pulling data sources together. In addition, I spend part of my day experimenting with ways to bypass the guardrails built into these systems. For more complex tasks, LLMs usefulness is limited, so I avoid them unless I can break them down into smaller tasks.  
 
 
-As a security practitioner, the inherent limitations of LLMs make it almost impossible for me to trust their judgment in complex incident response cases. The potential ceiling for its use in security and coding seemed clear in a sandboxed environment, but the realities of the real world made its limitations clear, and the potential for catastrophic misuse, outweigh its benefits. However, the use of LLMs in security is not completely useless; they can find software vulnerabilities (but not because LLMs are good at finding vulnerabilities, we have toolings doing that for 10+ years), and be useful for creating creative honeypots that mimic real-world assets. Overall, the introduction of LLMs added more work to my colleagues. It has led to more people outsourcing their thinking to mathematical prediction machines that introduced more bugs because senior management measures productivity in lines of code written. In addition, it has led to the degradation of the services that we use every day, causing notable outages of tools and bloating software, examples of what Cory Doctrow calls "enshitification." My experience is starkly at odds with the salespeople of AI (product/project managers, former crypto bros, and C-suite executives) who claim that AI will somehow eliminate white-collar jobs, make software better, and make life easier. The irony is that if we continue to push these LLM's into our products aggressively, the inception of enshitification will continue, and it will be the security practitioners on the ground to tell the real story.
+As a security practitioner, the inherent limitations of LLMs make it almost impossible for me to trust their judgment in complex incident response cases. The potential ceiling for its use in security and coding seemed clear in a sandboxed environment, but the realities of the real world made its limitations clear, and the potential for catastrophic misuse, outweigh its benefits. However, the use of LLMs in security is not completely useless; they can find software vulnerabilities (but not because LLMs are good at finding vulnerabilities, we have toolings doing that for 10+ years), and be useful for creating creative honeypots that mimic real-world assets. Overall, the introduction of LLMs added more work to my colleagues. It has led to more people outsourcing their thinking to mathematical prediction machines that introduced more bugs because senior management measures productivity in lines of code written. In addition, it has led to the degradation of the services that we use every day, causing notable outages of tools and bloating software, examples of what Cory Doctrow calls "enshitification." My experience is starkly at odds with the salespeople of AI (product/project managers, former crypto bros, and C-suite executives) who claim that AI will somehow eliminate white-collar jobs, make software better, and make life easier. The irony is that if we continue to push these LLM's into our products aggressively without knowing the effects of it, the inception of enshitification will continue, and it will be the security practitioners on the ground to tell the real story.
 
 References
 
@@ -186,10 +185,10 @@ References
 - Cory Doctrow (https://pluralistic.net)
 - Luke Kanies (https://lukekanies.com)
 - Marcus Hutchins (https://malwaretech.com/2025/08/every-reason-why-i-hate-ai.html)
-- Dr. Timnet Gebru’s paper (https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf)
+- Dr. Timnet Gebru, Emily Bender, and others paper on LLM's (https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf)
 - James Fodor (https://arxiv.org/abs/2502.14318)
-- Why Models Hallucinate https://openai.com/index/why-language-models-hallucinate
-- Paolo Perrone https://theaiengineer.substack.com/p/why-is-inference-slow-and-expensive
+- Why Models Hallucinate (https://openai.com/index/why-language-models-hallucinate)
+- Paolo Perrone (https://theaiengineer.substack.com/p/why-is-inference-slow-and-expensive)
 - Model Drift (https://www.ibm.com/think/topics/model-drift)
 - Context Rot (https://www.understandingai.org/p/context-rot-the-emerging-challenge)
 - LLM Benchmarking (https://blog-datalab.com/making-sense-of-ai-benchmarks/)
