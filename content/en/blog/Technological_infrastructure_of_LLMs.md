@@ -18,11 +18,11 @@ Understanding the Technical Infrastructure
 
 
 Understanding the Technical Jargon
+
 One of the very first things I noticed when engaging with others about the impact of AI on society was that they did not have a good grasp of the different job descriptions and the technical concepts I take for granted in the tech field.
 
 
 Software Developers
-
 
 Software developers write the code that powers the applications people use today. Building software is like building a facility for a family that is always growing. As requirements change, the facility will need to be updated to accommodate the growing number of people. Sometimes the facility needs small additions; sometimes, it needs major architectural changes while still keeping the various parts of the house intact. Just as this builder does, software developers navigate changes in business, technology, and customer needs while ensuring the product is working and secure. Just as a builder needs to work with people with diverse skill sets (plumbers, electricians, carpenters, roofers, etc.) to help build a facility, software developers have diverse skill sets and work with various teams to build software. Some of these skills and specialties in software engineering are listed below.
 
@@ -36,24 +36,18 @@ Software developers write the code that powers the applications people use today
 
 Information Technology (IT) Security/Security practitioners
 
-
 IT security professionals protect systems, networks, and data from unauthorized access, damage, or attack. Even though software developers can be IT security professionals, and IT security professionals can be software developers, for most organizations, having the same team perform both tasks is too much to ask. For example, an organization that manages critical IT infrastructure, such as banking or power grids, requires many IT security professionals to monitor, update, and surveil nation-states that can have significant impacts on people. Some of these IT security skills and specialties are listed below in a simplified  way.
-
 
 - Incident Response Analysts: Responds to active security breaches and cyberattacks, investigating what happened, containing the damage, and restoring systems to normal.
 - Red Team: Simulate real-world attacks on an organization's systems to find vulnerabilities before actual attackers do.
 - Detection Team: Monitor networks and systems for suspicious activity, building and tuning alerts to catch threats early.
 - GRC Team: Ensure the organization adheres to security laws, regulations, and internal policies, manages risk, and maintains compliance documentation.
 
-
 Artificial Intelligence (AI)
-
 
 AI is a broad term that encompasses fields of computer and data science focused on building machines with human-like intelligence to perform tasks such as learning, reasoning, problem-solving, perception, and language understanding (https://www.mtu.edu/computing/ai/). AI as a domain has been around since the 1950s.  AI is used in commercial software for tasks such as recommendation engines and phishing email detection. What introduced AI into the cultural zeitgeist was the release of ChatGPT, a conversational chatbot built on a large language model (LLM).
 
-
 Large Language Model (LLM)
-
 
 Dr. Timnit Gebru, an AI researcher, describes language models as "systems trained on string prediction tasks, predicting the likelihood of a token (character, word, or string) given either its preceding context or (in bidirectional and masked LMs) its surrounding context" (https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf).
 
@@ -93,9 +87,7 @@ LLM Benchmarking
 
 Benchmarking is a standardized framework for measuring and evaluating an LLM's performance (https://blog-datalab.com/making-sense-of-ai-benchmarks/). Huggingface, a popular open-source benchmark tool for LLMs, describes it as "a community-driven exam for AI." Benchmarking established a way to measure LLM progress that could be observed and verified by others.
 
-
 Retrieval-Augmented Generation (RAG)
-
 
 Marcus Hutchins, a security researcher, best describes RAG. He describes RAG as the ability for LLMs "to search the Internet for fresh data relevant to the user's query that allows it to use its training data to summarize information. This feature combines LLMs and search engines into a single product" (https://malwaretech.com/2025/08/every-reason-why-i-hate-ai.html). According to Microsoft (https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/02/13/5-key-features-and-benefits-of-retrieval-augmented-generation-rag/), RAG helps LLMS retrieve current, up-to-date knowledge, provide contextual relevance, reduce hallucinations, reduce costs, and increase user productivity.
 
